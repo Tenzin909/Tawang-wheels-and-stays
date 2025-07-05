@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Rental - Tawang Wheels and Stays</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <img src="images/logo.png" alt="Tawang Wheels and Stays Logo" />
+      </div>
+      <div class="agency-name">
+        <h1>Tawang Wheels and Stays</h1>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="booking">
+    <h2>Bike Rental Booking</h2>
+    <form class="booking-form" id="bikeBookingForm">
+      <label>Full Name:<br><input type="text" name="name" required></label><br><br>
+      <label>Email:<br><input type="email" name="email" required></label><br><br>
+      <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
+      <label>Pickup Location:<br><input type="text" name="location" required></label><br><br>
+      <label>Pickup Date:<br><input type="date" name="pickup_date" required></label><br><br>
+      <label>Return Date:<br><input type="date" name="return_date" required></label><br><br>
+      <label>Select Bike Type:<br>
+        <select name="bike_type" required>
+          <option value="">-- Choose a bike --</option>
+          <option value="scooter">Scooter</option>
+          <option value="gear">Gear Bike</option>
+          <option value="cruiser">Cruiser</option>
+        </select>
+      </label><br><br>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Tawang Wheels and Stays</p>
+  </footer>
+
+  <script>
+    document.getElementById('bikeBookingForm')?.addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Your bike rental booking has been submitted!');
+    });
+  </script>
+</body>
+</html>
