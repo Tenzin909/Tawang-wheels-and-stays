@@ -44,28 +44,29 @@ header {
 
 
 /* Shrink header elements only on small screens */
+/* Mobile-friendly header fix */
 @media (max-width: 768px) {
   .header-top {
+    padding: 10px 15px;
     flex-direction: column;
     align-items: center;
-    padding: 8px 10px;
-    gap: 8px;
+    text-align: center;
+    gap: 10px;
   }
 
   .logo img {
     max-height: 40px;
+    width: auto;
   }
 
   .agency-name h1 {
-    font-size: 1.2rem;
-    margin: 0;
-    text-align: center;
+    font-size: 1.4rem;
+    margin: 5px 0;
   }
 
-  .social-icons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  .contact-info {
+    font-size: 0.85rem;
+    line-height: 1.2;
   }
 
   .social-icons img {
@@ -73,6 +74,7 @@ header {
     height: 20px;
   }
 }
+
 
 
 
