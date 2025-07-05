@@ -516,9 +516,15 @@ form button {
   color: #0077b6;
 }
 
+
 @media (max-width: 768px) {
+  .swiper {
+    padding: 0 10px; /* Prevent cutoff at edges */
+  }
+
   .swiper-slide {
-    width: 90% !important;
+    width: 100% !important;
+    box-sizing: border-box;
     margin: 0 auto;
   }
 }
