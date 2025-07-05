@@ -495,7 +495,6 @@ form button {
   box-sizing: border-box;
 }
 
-
 .swiper-slide img {
   width: 100%;
   height: 180px;
@@ -513,22 +512,21 @@ form button {
   color: #555;
 }
 
-/* Swiper Navigation buttons */
 .swiper-button-next,
 .swiper-button-prev {
   color: #0077b6;
 }
 
-
+/* ✅ Mobile fix: Make slide full-width */
 @media (max-width: 768px) {
   .swiper {
-    padding: 0 10px; /* Prevent cutoff at edges */
+    padding: 0 10px;
   }
 
   .swiper-slide {
     width: 100% !important;
-    box-sizing: border-box;
+    max-width: none;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 }
-
