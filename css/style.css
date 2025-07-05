@@ -291,6 +291,9 @@ header {
 }
 
 
+
+
+
 .services {
   padding: 40px 20px;
   text-align: center;
@@ -512,3 +515,11 @@ form button {
 .swiper-button-prev {
   color: #0077b6;
 }
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+}
+
