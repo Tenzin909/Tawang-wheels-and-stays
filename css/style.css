@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5 {
   box-sizing: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
