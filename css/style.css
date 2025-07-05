@@ -45,35 +45,7 @@ header {
 
 /* Shrink header elements only on small screens */
 /* Mobile-friendly header fix */
-@media (max-width: 768px) {
-  .header-top {
-    padding: 10px 15px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .logo img {
-    max-height: 40px;
-    width: auto;
-  }
-
-  .agency-name h1 {
-    font-size: 1.4rem;
-    margin: 5px 0;
-  }
-
-  .contact-info {
-    font-size: 0.85rem;
-    line-height: 1.2;
-  }
-
-  .social-icons img {
-    width: 20px;
-    height: 20px;
-  }
-}
+/* === FIX HEADER SIZE ON MOBILE === */
 
 
 
@@ -141,6 +113,43 @@ header {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 5px 10px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 40px !important;
+    width: auto;
+  }
+
+  .agency-name h1 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+
+  .contact-header {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+
+  .social-icons {
+    gap: 10px;
+    justify-content: center;
+  }
 }
 
 
