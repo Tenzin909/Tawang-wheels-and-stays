@@ -198,6 +198,9 @@ header {
 }
 
 @media (max-width: 768px) {
+  .hero {
+    background-image: url('../images/hero-mobile.jpg'); /* Mobile background */
+  }
   .hero h2 {
     font-size: 1.8rem;
   }
