@@ -165,8 +165,8 @@ header {
   background-repeat: no-repeat;
   min-height: 90vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
   color: white;
   text-align: center;
@@ -188,6 +188,42 @@ header {
   max-width: 700px;
 }
 
+
+.book-now-heading {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.book-now-sub {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Middle alignment */
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
+
+/* Mobile-specific changes */
+@media (max-width: 768px) {
+  .book-now {
+    background-image: url('mobile-image.jpg'); /* Mobile background */
+  }
+
+  .book-now-heading {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .book-now-sub p {
+    font-size: 1rem;
+  }
+}
+
+
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -199,8 +235,9 @@ header {
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url('../images/hero-mobile01.jpg'); /* Mobile background */
+    background-image: url('../images/hero-mobile02.jpg'); /* Mobile background */
   }
+
   .hero h2 {
     font-size: 1.8rem;
   }
