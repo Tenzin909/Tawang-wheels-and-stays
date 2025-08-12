@@ -209,16 +209,15 @@ header {
 
 /* Mobile-specific changes */
 @media (max-width: 768px) {
-  .book-now {
-    background-image: url('../images/hero-mobile01.jpg'); /* Mobile background */
+  .hero {
+    background-image: url('../images/hero-mobile02.jpg'); /* Mobile background */
   }
 
-  .book-now-heading {
-    font-size: 1.5rem;
-    padding-top: 1rem;
+  .hero h2 {
+    font-size: 1.8rem;
   }
 
-  .book-now-sub p {
+  .hero p {
     font-size: 1rem;
   }
 }
