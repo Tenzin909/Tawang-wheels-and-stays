@@ -235,7 +235,7 @@ header {
 
 @media (max-width: 768px) {
   .hero {
-    background-image: url('../images/hero-mobile02.jpg'); /* Mobile background */
+    background-image: url('../images/hero-mobile01.jpg''); /* Mobile background */
   }
 
   .hero h2 {
