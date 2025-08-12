@@ -210,7 +210,7 @@ header {
 /* Mobile-specific changes */
 @media (max-width: 768px) {
   .book-now {
-    background-image: url('mobile-image.jpg'); /* Mobile background */
+    background-image: url('hero-mobile01.jpg'); /* Mobile background */
   }
 
   .book-now-heading {
