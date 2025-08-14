@@ -28,13 +28,20 @@ body {
 
 
 header {
-  position: sticky;
+  position: fixed;
+  width: 97%;
   top: 0;
   z-index: 1000;
   background-color: #0077b6;
   color: white;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 
@@ -42,9 +49,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   gap: 10px;
   text-align: center;
+  flex-wrap: wrap; /* already present, but test with nowrap to see difference */
+  min-width: 0; 
 }
 
 
@@ -95,8 +103,6 @@ header {
   color: #ffd700;
 }
 
-
-
 .social-icons {
   display: flex;
   gap: 15px;
@@ -122,38 +128,44 @@ header {
 
 @media (max-width: 768px) {
   header {
-    padding: 5px 10px;
+    padding: 5px 8px;
   }
 
   .header-top {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 6px;
+    text-align: left;
+    flex-wrap: wrap;
   }
 
   .logo img {
-    height: 40px !important;
+    height: 50px !important;
     width: auto;
   }
 
   .agency-name h1 {
-    font-size: 1.5rem;
-    margin: 5px 0;
+    font-size: 1.2rem;
+    margin: 0;
   }
 
   .contact-header {
-    font-size: 0.85rem;
-    line-height: 1.2;
-  }
-
-  .social-icons a {
-    font-size: 1.2rem;
+    font-size: 0.7rem;
+    line-height: 1.1;
+    flex: 1 0 100%;
+    text-align: center;
+    margin-top: 3px;
   }
 
   .social-icons {
-    gap: 10px;
-    justify-content: center;
+    display: flex;
+    gap: 6px;
+    font-size: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 1rem;
   }
 }
 
@@ -163,7 +175,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +222,7 @@ header {
 /* Mobile-specific changes */
 @media (max-width: 768px) {
   .hero {
-    background-image: url('../images/hero-mobile01.jpg'); /* Mobile background */
+    background-image: url('../images/hero-mobile02.jpg'); /* Mobile background */
   }
 
   .hero h2 {
@@ -232,7 +244,6 @@ header {
   font-size: 1.2rem;
 }
 
-
 .cta-button {
   display: inline-block;
   margin-top: 20px;
@@ -250,13 +261,6 @@ header {
   background-color: #f77f00;
   transform: scale(1.05);
 }
-
-
-
-
-
-
-
 
 .destinations {
   padding: 60px 20px;
@@ -315,10 +319,6 @@ header {
     width: 45%;
   }
 }
-
-
-
-
 
 .services {
   padding: 40px 20px;
