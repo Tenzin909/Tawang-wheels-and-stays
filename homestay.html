@@ -4,18 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homestay Booking - Tawang Wheels and Stays</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/homestay_style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="header-top">
       <div class="logo">
-        <img src="images/logo.PNG" alt="Tawang Wheels and Stays Logo" />
+        <img src="images/logo.png" alt="Tawang Wheels and Stays Logo" />
       </div>
       <div class="agency-name">
         <h1>Tawang Wheels and Stays</h1>
+        <div class="contact-header">
+    <p>
+      <i class="fas fa-phone"></i>
+      <a href="tel:+919876543210">+91-9876543210</a> |
+      <a href="tel:+919123456780">+91-9123456780</a>
+    </p>
+    <p>
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:contact@travelbliss.com">@tawangwheels&stays.com</a>
+    </p>
+  </div>
       </div>
+      
       <div class="social-icons">
         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
@@ -29,23 +43,67 @@
     </nav>
   </header>
 
-  <section class="booking">
-    <h2>Homestay Booking</h2>
-    <form class="booking-form" id="homestayBookingForm">
-      <label>Full Name:<br><input type="text" name="name" required></label><br><br>
-      <label>Email:<br><input type="email" name="email" required></label><br><br>
-      <label>Phone Number:<br><input type="tel" name="phone" required></label><br><br>
-      <label>Destination:<br><input type="text" name="location" required></label><br><br>
-      <label>Check-in Date:<br><input type="date" name="checkin" required></label><br><br>
-      <label>Check-out Date:<br><input type="date" name="checkout" required></label><br><br>
-      <label>Guests:<br><input type="number" name="guests" min="1" required></label><br><br>
-      <button type="submit">Book Now</button>
-    </form>
-  </section>
+<section class="homestays">
+  <h2>Our Homestays</h2>
+  <div class="homestay-cards">
+
+    <div class="homestay-card">
+      <img src="images/homestay1.jpg" alt="Mountain View Homestay">
+      <div class="card-content">
+        <h3>Mountain View Homestay</h3>
+        <p>Enjoy the scenic beauty of the mountains with cozy rooms and warm hospitality.</p>
+        <a href="#" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+    <div class="homestay-card">
+      <img src="images/homestay2.jpg" alt="Riverside Retreat">
+      <div class="card-content">
+        <h3>Riverside Retreat</h3>
+        <p>Stay by the river, wake up to the sound of flowing water and birds chirping.</p>
+        <a href="#" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+    <div class="homestay-card">
+      <img src="images/homestay3.jpg" alt="Heritage Cottage">
+      <div class="card-content">
+        <h3>Heritage Cottage</h3>
+        <p>Experience traditional architecture with modern comfort in a serene location.</p>
+        <a href="#" class="btn-book">Book Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
   <footer>
     <p>© 2025 Tawang Wheels and Stays</p>
   </footer>
+  
+  <script> let lastScrollTop = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop <= 0) {
+    // Always show at the top
+    header.style.transform = "translateY(0)";
+  } else if (scrollTop > lastScrollTop) {
+    // Down
+    header.style.transform = "translateY(-100%)";
+  } else {
+    // Up
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+</script>
 
   <script>
     document.getElementById('homestayBookingForm')?.addEventListener('submit', function (e) {
@@ -53,5 +111,6 @@
       alert('Your homestay booking has been submitted!');
     });
   </script>
+ 
 </body>
 </html>
