@@ -25,22 +25,24 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 
-let lastScrollY = window.scrollY;
+let lastScrollTop = 0;
+const header = document.querySelector("header");
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (window.scrollY > lastScrollY) {
-    // Scrolling down
-    header.classList.add("hide");
+  if (scrollTop <= 0) {
+    // Always show at the top
+    header.style.transform = "translateY(0)";
+  } else if (scrollTop > lastScrollTop) {
+    // Down
+    header.style.transform = "translateY(-100%)";
   } else {
-    // Scrolling up
-    header.classList.remove("hide");
+    // Up
+    header.style.transform = "translateY(0)";
   }
 
-  lastScrollY = window.scrollY;
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
-
-
 
 
