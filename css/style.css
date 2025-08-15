@@ -423,7 +423,7 @@ header.hide {
 }
 
 /* Extra small phones - 1 per row, smallest fonts */
-@media (max-width: 400px) {
+@media (max-width: 385px) {
   .service-card {
     flex: 1 1 100%;
     max-width: 100%;
@@ -706,7 +706,7 @@ form button {
 }
 
 /* Extra small phones - 1 per row */
-@media (max-width: 400px) {
+@media (max-width: 385px) {
   .packages-container {
     grid-template-columns: 1fr;
   }
