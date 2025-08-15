@@ -25,24 +25,27 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 
-let lastScrollTop = 0;
+let lastScroll = 0;
 const header = document.querySelector("header");
 
-window.addEventListener("scroll", function () {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
 
-  if (scrollTop <= 0) {
-    // Always show at the top
+  if (currentScroll <= 0) {
+    // At the very top — always show header
     header.style.transform = "translateY(0)";
-  } else if (scrollTop > lastScrollTop) {
-    // Down
+    return;
+  }
+
+  if (currentScroll > lastScroll) {
+    // Scrolling down — hide header
     header.style.transform = "translateY(-100%)";
   } else {
-    // Up
+    // Scrolling up — show header
     header.style.transform = "translateY(0)";
   }
 
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  lastScroll = currentScroll;
 });
 
 
