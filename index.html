@@ -227,12 +227,13 @@
 
 <script>
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.2, // Slightly more than 2 to show next preview
+    slidesPerView: "auto", // Slightly more than 2 to show next preview
     spaceBetween: 20,
     loop: true, // Enables infinite loop
+    loopedSlides: 7,
     speed: 600, // Smooth transition speed in ms
     autoplay: {
-      delay: 1000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     navigation: {
@@ -241,7 +242,8 @@
     },
     breakpoints: {
       768: { slidesPerView: 3 },
-      1024: { slidesPerView: 4 }
+      1024: { slidesPerView: 4 },
+      1440: { slidesPerView: 5.2 }
     }
   });
 </script>
